@@ -1,2 +1,4 @@
-# class_2019-03-05
-For Class 6.1 of Gov 1005
+# Animation of Life Expectancy Over the Years
+This plot uses `gganimate` and the `gapminder` dataset.
+
+You can view the final output here on Rpubs: http://rpubs.com/hemanthb/lifeexp_v_time.
