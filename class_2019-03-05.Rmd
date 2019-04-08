@@ -4,23 +4,27 @@ author: "Hemanth Bharatha Chakravarthy"
 date: "3/5/2019"
 output: html_document
 ---
-
+# The World Gets Better Every Year: Comparing Life Expectancy with Time 
+## Playing Around with the Gapminder Dataset and gganimate
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
-library(tidyverse)
-library(devtools)
-library(gganimate)
-library(gapminder)
-library(gifski)
-library(png)
-gapminder %>%
-  filter(continent %in% c("Americas", "Africa", "Asia")) %>% 
-  ggplot(aes(x = gdpPercap, y = lifeExp, color = continent, size = pop, alpha = pop)) + 
-  geom_point() +
-  scale_x_log10() +
-  transition_states(year,
-                    transition_length = 2,
-                    state_length = 1) +
-  facet_wrap(~continent) +
-  ggtitle("The World Gets Better Every Year: {year}")
+# knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+# library(tidyverse)
+# library(gganimate)
+# library(gapminder)
+# data("gapminder")
+# gganimate dynamic plot displaying 
+# gapminder %>%
+#   filter(continent %in% c("Americas", "Africa", "Asia")) %>% 
+#   ggplot(aes(x = gdpPercap, y = lifeExp, color = continent, size = pop, alpha = pop)) + 
+#   geom_point() +
+#   scale_x_log10() +
+#   transition_time(year) +
+#   facet_wrap(~continent) +
+#   ggtitle("The World Gets Better Every Year: {frame_time}") 
+# 
+# ggsave("plot.png")
 ```
+
+![](gganim.gif)
+
+
